@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copper Sparrows Attic Restoration | CT</title>
+    <style>
+        /* Brand Colors & Base Styles */
+        :root {
+            --navy: #111A2E;
+            --navy-light: #1A2642;
+            --copper: #B87333;
+            --copper-hover: #9e6029;
+            --grey: #949BBE;
+            --grey-dark: #4B5563;
+            --light-bg: #F4F6F9;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--navy);
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: var(--white);
+            padding: 10px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(17, 26, 46, 0.06);
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .logo-container img {
+            height: 60px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--navy);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--copper);
+        }
+
+        .btn {
+            background-color: var(--copper);
+            color: var(--white);
+            padding: 10px 22px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(184, 115, 51, 0.25);
+        }
+
+        .btn:hover {
+            background-color: var(--copper-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(184, 115, 51, 0.35);
+            color: var(--white);
+        }
+
+        /* Sections General */
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-light {
+            background-color: var(--light-bg);
+            max-width: 100%;
+            padding: 60px 20px;
+        }
+
+        .section-light .content-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-navy {
+            background-color: var(--navy);
+            color: var(--white);
+            max-width: 100%;
+            padding: 60px 20px;
+        }
+
+        .section-navy .content-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            color: var(--navy);
+            margin-bottom: 15px;
+        }
+
+        .section-navy h2, .section-navy h3 {
+            color: var(--white);
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 3px solid var(--copper);
+            display: inline-block;
+            padding-bottom: 4px;
+            margin-bottom: 30px;
+            letter-spacing: -0.5px;
+        }
+
+        /* Hero Section - Full Width Fix */
+        .hero-wrapper {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            width: 100%;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px 70px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            color: var(--white);
+        }
+
+        .hero-logo {
+            height: 120px; 
+            width: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.3));
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            margin-bottom: 15px;
+            color: var(--white);
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--grey);
+            max-width: 650px;
+            margin: 0 auto 25px auto;
+        }
+
+        /* Services Grid */
+        .service-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .service-list li {
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid var(--copper);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .service-list li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(184, 115, 51, 0.12);
+        }
+
+        .service-number {
+            background-color: var(--navy);
+            color: var(--copper);
+            font-weight: bold;
+            font-size: 0.95rem;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .service-content h3 {
+            margin-bottom: 6px;
+            font-size: 1.1rem;
+        }
+
+        .service-content p {
+            color: var(--grey-dark);
+            font-size: 0.95rem;
+        }
+
+        /* Two Column Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .info-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+            border-top: 4px solid transparent;
+            height: 100%;
+        }
+
+        .info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-top-color: var(--copper);
+        }
+
+        .info-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .info-card p {
+            color: var(--grey-dark);
+            font-size: 0.95rem;
+        }
+
+        /* Image Integration Styling */
+        .content-image-card {
+            background: var(--white);
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .content-image-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Contact Section */
+        .contact-box {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: var(--white);
+            padding: 45px 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border: 1px solid rgba(184, 115, 51, 0.3);
+        }
+
+        .contact-box h2 {
+            color: var(--white);
+            border-bottom-color: var(--copper);
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .contact-buttons .btn {
+            background-color: var(--white);
+            color: var(--navy);
+        }
+
+        .contact-buttons .btn:hover {
+            background-color: var(--copper);
+            color: var(--white);
+        }
+
+        /* Interactive FAQ Accordion */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .faq-item {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border-left: 4px solid var(--navy);
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-left-color: var(--copper);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 20px 25px;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--navy);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--copper);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            padding: 0 25px;
+            color: var(--grey-dark);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 0 25px 20px 25px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0b111e;
+            color: var(--grey);
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        footer a:hover {
+            color: var(--white);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none; 
+            }
+            .grid-2, .service-list {
+                grid-template-columns: 1fr;
+            }
+            header {
+                justify-content: center;
+                padding: 10px 15px;
+            }
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+            .hero-logo {
+                height: 100px;
+            }
+            section, .section-light, .section-navy, .hero {
+                padding: 45px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo-container">
+            <img src="LogoCSAR-BGRemoved.png" alt="Copper Sparrows Attic Restoration Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#why-us">Why Us?</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#standards">Non-Toxic & Humane</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero-wrapper">
+        <section class="hero">
+            <img src="LogoCSAR-BGRemoved.png" alt="Copper Sparrows Attic Restoration Shield" class="hero-logo">
+            <h1>Permanent Pest Exclusion & Attic Restoration in Connecticut</h1>
+            <p>We bridge the gap between permanent pest control and high-performance energy efficiency. Reclaim your attic space, stop drafts, and lower your heating bills.</p>
+            <a href="#contact" class="btn">Book a Free Estimate</a>
+        </section>
+    </div>
+
+    <!-- Why Us (Problem vs Solution) -->
+    <section id="why-us">
+        <h2>Why Us?</h2>
+        <div class="grid-2">
+            <div class="info-card">
+                <h3 style="color: #c0392b;">The Problem</h3>
+                <p>Most pest companies <strong>trap rodents and leave</strong>. Most insulation companies <strong>blow over contaminated, flattened insulation</strong>. Leaving <strong>biological hazards</strong>, <strong>entry points</strong>, and <strong>crushed R-value</strong> behind costs you thousands in heating loss and structural damage.</p>
+            </div>
+            <div class="info-card">
+                <h3 style="color: var(--copper);">The Solution</h3>
+                <p>We provide a <strong>top-to-bottom restoration</strong>. We <strong>remove hazards</strong>, <strong>sanitize the space</strong>, <strong>permanently seal out wildlife</strong>, <strong>air-seal the thermal envelope</strong>, and <strong>upgrade your insulation</strong> to modern energy codes—all in one efficient process.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services -->
+    <div class="section-light">
+        <section id="services" style="padding: 0;">
+            <h2>Our Services</h2>
+            <ul class="service-list">
+                <li>
+                    <div class="service-number">01</div>
+                    <div class="service-content">
+                        <h3>Comprehensive Inspection</h3>
+                        <p>Visual and thermal check for insulation depth, pest activity, air leaks, ventilation blockages, and moisture indicators.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-number">02</div>
+                    <div class="service-content">
+                        <h3>Bio-Hazard Cleanout</h3>
+                        <p>HEPA-vacuuming and removal of contaminated, flattened insulation, nesting debris, animal waste, and old storage clutter.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-number">03</div>
+                    <div class="service-content">
+                        <h3>Sanitation & Deodorization</h3>
+                        <p>Application of professional-grade sanitizers and enzymatic agents to eliminate pathogens and rodent pheromone trails.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-number">04</div>
+                    <div class="service-content">
+                        <h3>Wildlife Exclusion</h3>
+                        <p>Permanent sealing of exterior entry points and vents using chew-proof hardware cloth, flashing, and copper mesh.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-number">05</div>
+                    <div class="service-content">
+                        <h3>Thermal Air Sealing</h3>
+                        <p>Sealing all top plates, wire penetrations, and bypasses between the living space and the attic to stop drafts.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-number">06</div>
+                    <div class="service-content">
+                        <h3>Insulation Installation</h3>
+                        <p>Blowing in high-performance cellulose or Rockwool insulation to target R-values, maximizing energy savings.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Non-Toxic & Humane Standards (Featuring Cellulose Insulation Image) -->
+    <section id="standards">
+        <h2>Non-Toxic & Humane Standards</h2>
+        <div class="grid-2" style="margin-bottom: 25px;">
+            <div class="info-card">
+                <h3>Safe, Non-Toxic Insulation</h3>
+                <p>We exclusively install materials prioritizing your indoor air quality. Our <strong>Blown-In Cellulose</strong> uses up to 85% recycled paper treated with natural borates. Our <strong>Rockwool</strong> is spun from natural volcanic rock and steel slag with zero toxic off-gassing.</p>
+            </div>
+            <div class="content-image-card">
+                <img src="ChatGPT Image Oct 2, 2026, 10_18_09 AM.png" alt="Contractor blowing cellulose insulation in a clean attic">
+            </div>
+        </div>
+
+        <!-- Featuring Pest Exclusion Snips Image -->
+        <div class="grid-2">
+            <div class="content-image-card">
+                <img src="ChatGPT Image Oct 2, 2026, 10_44_40 AM.png" alt="Contractor cutting copper mesh with snips for pest exclusion">
+            </div>
+            <div class="info-card">
+                <h3>Humane & Permanent Exclusion</h3>
+                <p>We believe in <strong>permanent physical defense</strong>, not lingering chemical hazards. Instead of secondary poisons, we completely seal exterior vulnerabilities using <strong>chew-proof hardware cloth and copper mesh</strong>—keeping wildlife safely outside.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <div class="section-navy">
+        <div class="content-wrapper">
+            <section id="about" style="padding: 0;">
+                <h2>About Us</h2>
+                <p style="margin-bottom: 15px; color: var(--grey); font-size: 1rem;">Based in Litchfield County, Copper Sparrows Attic Restoration proudly serves homeowners throughout Connecticut. We provide highly efficient, uncompromising restoration services for compromised attics.</p>
+                <p style="color: var(--grey); font-size: 1rem;">We are fully insured and registered with the state as a Connecticut Home Improvement Contractor (HIC). From the first phone call to final inspection, we handle your home with total professionalism.</p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-box">
+            <h2>Get Started Today</h2>
+            <p style="margin-bottom: 20px; color: var(--grey); max-width: 600px; margin-left: auto; margin-right: auto; font-size: 0.95rem;">Our process begins with a rapid, remote <strong>Free Estimate</strong>. Contact us below to schedule your consultation.</p>
+            
+            <div class="contact-buttons">
+                <a href="#" class="btn">Get a Free Estimate</a>
+                <a href="mailto:coppersparrowsattic@gmail.com" class="btn">Email Us</a>
+                <a href="tel:#" class="btn">Call / Text</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <div class="section-light">
+        <section id="faq" style="padding: 60px 20px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">What is R-Value?</button>
+                    <div class="faq-answer">
+                        <p>R-Value measures insulation's resistance to heat flow. Upgrading your R-Value stops your HVAC system from working overtime, lowering energy bills year-round.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How does this prevent mold?</button>
+                    <div class="faq-answer">
+                        <p>Insulating the attic floor keeps living space heat inside while letting attic vents flush out stray moisture, keeping your roof deck bone-dry.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Do I have to pay for an estimate?</button>
+                    <div class="faq-answer">
+                        <p>Initial estimates are completely free and conducted remotely. On-site paid comprehensive inspections are scheduled if you choose to move forward.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">What if structural rot is found?</button>
+                    <div class="faq-answer">
+                        <p>If we uncover compromised rafters during cleanout, we pause work and document it so a structural carpenter can repair it before insulation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Copper Sparrows Attic Restoration LLC. All Rights Reserved. | Connecticut HIC Registered & Insured</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">
+            <a href="terms.html" style="color: var(--grey); text-decoration: underline; margin: 0 8px;">Terms of Service</a> | 
+            <a href="privacy.html" style="color: var(--grey); text-decoration: underline; margin: 0 8px;">Privacy Policy</a> | 
+            <a href="refund.html" style="color: var(--grey); text-decoration: underline; margin: 0 8px;">Refund Policy</a> | 
+            <a href="disclaimer.html" style="color: var(--grey); text-decoration: underline; margin: 0 8px;">Disclaimer</a>
+        </p>
+    </footer>
+
+    <!-- Simple JavaScript for FAQ Accordion Dropdown -->
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const questionBtn = item.querySelector('.faq-question');
+            questionBtn.addEventListener('click', () => {
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
